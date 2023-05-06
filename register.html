@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Đăng ký</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./bootstrap/css/bootstrap.min.css"
+    />
+
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- end font awesome -->
+
+    <!-- start css -->
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/contact.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+    <link rel="stylesheet" href="./css/contact-responsive.css" />
+    <style>
+      /* Form đăng ký */
+      form {
+        width: 400px;
+        margin: 0 auto;
+        background-color: #f2f2f2;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .error {
+        color: red;
+        margin-bottom: 10px;
+      }
+
+      input[type="submit"] {
+        display: block;
+        margin: 0 auto;
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <div class="logoheader">
+          <a href="index.html"><img src="./img/logo-1.jpg" alt="" /></a>
+        </div>
+      </div>
+      <div class="main-bar" id="navbarToggleExternalContent">
+        <ul>
+          <li>
+            <i class="fa-solid fa-house"></i
+            ><a href="/index.html"> Trang chủ</a>
+          </li>
+
+          <li><a href="/product.html">Sản phẩm </a></li>
+          <li><a href="/sitemap.html">Site map</a></li>
+          <li><a href="/about.html">Về chúng tôi</a></li>
+          <li><a href="/contact.html"> Liên hệ </a></li>
+          <li><a href="/login.html">Đăng nhập</a></li>
+          <li><a href="/register.html">Đăng ký</a></li>
+        </ul>
+      </div>
+    </header>
+    <h1>Đăng ký</h1>
+    <form>
+      <label for="name">Họ tên</label>
+      <input type="text" id="name" name="name" required />
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+      <div id="emailError" class="error"></div>
+      <label for="password">Mật khẩu</label>
+      <input type="password" id="password" name="password" required />
+      <div id="passwordError" class="error"></div>
+      <input type="submit" value="Đăng ký" />
+    </form>
+
+    <script>
+      const emailInput = document.getElementById("email");
+      const emailError = document.getElementById("emailError");
+      const passwordInput = document.getElementById("password");
+      const passwordError = document.getElementById("passwordError");
+
+      // Hàm kiểm tra định dạng email
+      function isValidEmail(email) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      }
+
+      // Hàm kiểm tra độ mạnh của mật khẩu
+      function isStrongPassword(password) {
+        // Mật khẩu phải chứa ít nhất 8 ký tự, gồm chữ thường, chữ hoa và số
+        return /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/.test(password);
+      }
+
+      // Xử lý sự kiện khi người dùng submit form đăng ký
+      function handleSignupSubmit(event) {
+        event.preventDefault(); // Ngăn chặn trang web reload khi submit form
+        const name = document.getElementById("name").value; // Lấy giá trị
+        const email = emailInput.value;
+        const password = passwordInput.value;
+
+        // Kiểm tra định dạng email
+        if (!isValidEmail(email)) {
+          emailError.innerHTML = "Địa chỉ email không hợp lệ";
+          return;
+        }
+        emailError.innerHTML = "";
+
+        // Kiểm tra độ mạnh của mật khẩu
+        if (!isStrongPassword(password)) {
+          passwordError.innerHTML =
+            "Mật khẩu phải chứa ít nhất 8 ký tự, gồm chữ thường, chữ hoa và số";
+          return;
+        }
+        passwordError.innerHTML = "";
+
+        // Nếu thông tin đăng ký hợp lệ, gửi form đăng ký đến server
+        // Code để gửi form đăng ký đến server ở đây
+        document.cookie = `email=${email}; path=/; max-age=3600`;
+        document.cookie = `password=${password}; path=/; max-age=3600`;
+        // Sau khi đăng ký thành công, chuyển sang trang khác
+        window.location.href = "/login.html";
+      }
+
+      // Đăng ký sự kiện submit cho form đăng ký
+      const signupForm = document.querySelector("form");
+      signupForm.addEventListener("submit", handleSignupSubmit);
+    </script>
+  </body>
+</html>

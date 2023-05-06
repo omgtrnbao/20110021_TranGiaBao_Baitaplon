@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng nhập</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./bootstrap/css/bootstrap.min.css"
+    />
+
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- end font awesome -->
+
+    <!-- start css -->
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/contact.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+    <link rel="stylesheet" href="./css/contact-responsive.css" />
+    <style>
+      /* Form đăng nhập */
+      #login-form {
+        width: 400px;
+        margin: 0 auto;
+        background-color: #f2f2f2;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+
+      #login-form label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      #login-form input[type="email"],
+      #login-form input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      }
+
+      #login-form button[type="submit"] {
+        display: block;
+        margin: 0 auto;
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      #login-form button[type="submit"]:hover {
+        background-color: #3e8e41;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <div class="logoheader">
+          <a href="index.html"><img src="./img/logo-1.jpg" alt="" /></a>
+        </div>
+      </div>
+      <div class="main-bar" id="navbarToggleExternalContent">
+        <ul>
+          <li>
+            <i class="fa-solid fa-house"></i
+            ><a href="/index.html"> Trang chủ</a>
+          </li>
+
+          <li><a href="/product.html">Sản phẩm </a></li>
+          <li><a href="/sitemap.html">Site map</a></li>
+          <li><a href="/about.html">Về chúng tôi</a></li>
+          <li><a href="/contact.html"> Liên hệ </a></li>
+          <li><a href="/login.html">Đăng nhập</a></li>
+          <li><a href="/register.html">Đăng ký</a></li>
+        </ul>
+      </div>
+    </header>
+    <h1 style="text-align: center;">Đăng nhập</h1>
+    <form id="login-form">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required />
+
+      <button type="submit">Log In</button>
+    </form>
+
+    <script>
+      const form = document.querySelector("#login-form");
+      const emailInput = form.querySelector("#email");
+      const passwordInput = form.querySelector("#password");
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const email = emailInput.value;
+        const password = passwordInput.value;
+
+        // Kiểm tra cookie để xác minh thông tin đăng nhập
+        const cookies = document.cookie.split(";");
+        let emailMatched = false;
+        let passwordMatched = false;
+
+        cookies.forEach((cookie) => {
+          const [name, value] = cookie.trim().split("=");
+
+          if (name === "email" && value === email) {
+            emailMatched = true;
+          }
+
+          if (name === "password" && value === password) {
+            passwordMatched = true;
+          }
+        });
+
+        if (emailMatched && passwordMatched) {
+          // Chuyển hướng đến trang khác
+          window.location.href = "/dashboard";
+        } else {
+          alert("Invalid email or password. Please try again.");
+        }
+      });
+    </script>
+  </body>
+</html>

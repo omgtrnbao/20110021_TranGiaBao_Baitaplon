@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bootstrap -->
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./bootstrap/css/bootstrap.min.css"
+    />
+
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- end font awesome -->
+
+    <!-- start css -->
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/about.css" />
+    <link rel="stylesheet" href="./css/cart.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+    <link rel="stylesheet" href="./css/contact-responsive.css" />
+    <!-- end css -->
+    <title>Cart</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="header">
+        <div class="logoheader">
+          <a href="index.html"><img src="./img/logo-1.jpg" alt="" /></a>
+        </div>
+      </div>
+      <div class="main-bar" id="navbarToggleExternalContent">
+        <ul>
+          <li>
+            <i class="fa-solid fa-house"></i
+            ><a href="/index.html"> Trang chủ</a>
+          </li>
+
+          <li><a href="/product.html">Sản phẩm </a></li>
+          <li><a href="/sitemap.html">Site map</a></li>
+          <li><a href="/about.html">Về chúng tôi</a></li>
+          <li><a href="/contact.html"> Liên hệ </a></li>
+          <li><a href="/login.html">Đăng nhập</a></li>
+          <li><a href="/register.html">Đăng ký</a></li>
+          <form class="form-inline">
+            <input
+              class="form-control mr-sm-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+          </form>
+        </ul>
+      </div>
+    </header>
+    <!-- End header -->
+    <div class="container px-3 my-5 clearfix">
+      <!-- Shopping cart table -->
+      <div class="card">
+        <div class="card-header">
+          <h2>Giỏ hàng</h2>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-bordered m-0">
+              <thead>
+                <tr>
+                  <!-- Set columns width -->
+                  <th class="text-center py-3 px-4" style="min-width: 400px;">
+                    Tên sản phẩm &amp; Chi tiết
+                  </th>
+                  <th class="text-right py-3 px-4" style="width: 100px;">
+                    Giá
+                  </th>
+                  <th class="text-center py-3 px-4" style="width: 120px;">
+                    Quantity
+                  </th>
+                  <th class="text-right py-3 px-4" style="width: 100px;">
+                    Tổng
+                  </th>
+                  <th
+                    class="text-center align-middle py-3 px-0"
+                    style="width: 40px;"
+                  >
+                    <a
+                      href="#"
+                      class="shop-tooltip float-none text-light"
+                      title=""
+                      data-original-title="Clear cart"
+                      ><i class="ino ion-md-trash"></i
+                    ></a>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="p-4">
+                    <div class="media align-items-center">
+                      <img
+                        src="/img/item1-1.jpg"
+                        class="d-block ui-w-40 ui-bordered mr-4"
+                        alt=""
+                      />
+                      <div class="media-body">
+                        <a href="#" class="d-block text-dark">Giày Boot</a>
+                        <small>
+                          <span class="text-muted">Color:</span>
+                          <span
+                            class="ui-product-color ui-product-color-sm align-text-bottom"
+                            style="background: black;"
+                          ></span>
+                          &nbsp; <span class="text-muted">Size: </span> EU 37
+                          &nbsp;
+                          <span class="text-muted">Ships from: </span> China
+                        </small>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="text-right font-weight-semibold align-middle p-4">
+                    $57.55
+                  </td>
+                  <td class="align-middle p-4">
+                    <input
+                      type="text"
+                      class="form-control text-center"
+                      value="2"
+                    />
+                  </td>
+                  <td class="text-right font-weight-semibold align-middle p-4">
+                    $115.1
+                  </td>
+                  <td class="text-center align-middle px-0">
+                    <a
+                      href="#"
+                      class="shop-tooltip close float-none text-danger"
+                      title=""
+                      data-original-title="Remove"
+                      >×</a
+                    >
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="p-4">
+                    <div class="media align-items-center">
+                      <img
+                        src="/img/item1-1.jpg"
+                        class="d-block ui-w-40 ui-bordered mr-4"
+                        alt=""
+                      />
+                      <div class="media-body">
+                        <a href="#" class="d-block text-dark">Giày Boot</a>
+                        <small>
+                          <span class="text-muted">Color:</span>
+                          <span
+                            class="ui-product-color ui-product-color-sm align-text-bottom"
+                            style="background: black;"
+                          ></span>
+                          &nbsp; <span class="text-muted">Size: </span> EU 37
+                          &nbsp;
+                          <span class="text-muted">Ships from: </span> China
+                        </small>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="text-right font-weight-semibold align-middle p-4">
+                    $57.55
+                  </td>
+                  <td class="align-middle p-4">
+                    <input
+                      type="text"
+                      class="form-control text-center"
+                      value="2"
+                    />
+                  </td>
+                  <td class="text-right font-weight-semibold align-middle p-4">
+                    $115.1
+                  </td>
+                  <td class="text-center align-middle px-0">
+                    <a
+                      href="#"
+                      class="shop-tooltip close float-none text-danger"
+                      title=""
+                      data-original-title="Remove"
+                      >×</a
+                    >
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="p-4">
+                    <div class="media align-items-center">
+                      <img
+                        src="/img/item1-1.jpg"
+                        class="d-block ui-w-40 ui-bordered mr-4"
+                        alt=""
+                      />
+                      <div class="media-body">
+                        <a href="#" class="d-block text-dark">Giày Boot</a>
+                        <small>
+                          <span class="text-muted">Color:</span>
+                          <span
+                            class="ui-product-color ui-product-color-sm align-text-bottom"
+                            style="background: black;"
+                          ></span>
+                          &nbsp; <span class="text-muted">Size: </span> EU 37
+                          &nbsp;
+                          <span class="text-muted">Ships from: </span> China
+                        </small>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="text-right font-weight-semibold align-middle p-4">
+                    $57.55
+                  </td>
+                  <td class="align-middle p-4">
+                    <input
+                      type="text"
+                      class="form-control text-center"
+                      value="2"
+                    />
+                  </td>
+                  <td class="text-right font-weight-semibold align-middle p-4">
+                    $115.1
+                  </td>
+                  <td class="text-center align-middle px-0">
+                    <a
+                      href="#"
+                      class="shop-tooltip close float-none text-danger"
+                      title=""
+                      data-original-title="Remove"
+                      >×</a
+                    >
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- / Shopping cart table -->
+
+          <div
+            class="d-flex flex-wrap justify-content-between align-items-center pb-4"
+          >
+            <div class="mt-4">
+              <label class="text-muted font-weight-normal">Promocode</label>
+              <input type="text" placeholder="ABC" class="form-control" />
+            </div>
+            <div class="d-flex">
+              <div class="text-right mt-4 mr-5">
+                <label class="text-muted font-weight-normal m-0"
+                  >Giảm giá</label
+                >
+                <div class="text-large"><strong>$20</strong></div>
+              </div>
+              <div class="text-right mt-4">
+                <label class="text-muted font-weight-normal m-0"
+                  >Tổng tiền</label
+                >
+                <div class="text-large"><strong>$1164.65</strong></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="float-right">
+            <button
+              type="button"
+              class="btn btn-lg btn-default md-btn-flat mt-2 mr-3"
+            >
+              Back to shopping
+            </button>
+            <button type="button" class="btn btn-lg btn-primary mt-2">
+              Thanh toán
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer class="py-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h4>Thông tin liên hệ</h4>
+            <p>Địa chỉ: 401 Lô 1 Cư xá Thanh Đa, Quận Bình Thạnh, TP. Hồ Chí Minh</p>
+            <p>Điện thoại: 0932163534</p>
+            <p>Email: trangbao266@gmail.com</p>
+          </div>
+          <div class="col-md-6">
+            <h4>Đường dẫn nhanh</h4>
+            <ul class="list-unstyled">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="/about.html">About</a></li>
+              <li><a href="/product">Product</a></li>
+              <li><a href="/contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- index.js -->
+
+    <script src="./js/index.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="./bootstrap/js/jquery.slim.min.js"></script>
+    <script src="./bootstrap/js/popper.min.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>

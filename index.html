@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bootstrap -->
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./bootstrap/css/bootstrap.min.css"
+    />
+
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- end font awesome -->
+
+    <!-- start css -->
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+    <link rel="stylesheet" href="./css/contact-responsive.css" />
+    <!-- end css -->
+    <title>Home</title>
+  </head>
+
+  <body>
+    <!-- Image container -->
+    <div class="image-container">
+      <!-- Header -->
+      <header>
+        <div class="header">
+          <div class="logoheader">
+            <a href="index.html"><img src="./img/logo-2.jpg" alt="" /></a>
+          </div>
+        </div>
+        <div class="main-bar" id="navbarToggleExternalContent">
+          <ul>
+            <li>
+              <i class="fa-solid fa-house"></i
+              ><a href="/index.html"> Trang chủ</a>
+            </li>
+
+            <li><a href="/product.html">Sản phẩm </a></li>
+            <li><a href="/sitemap.html">Site map</a></li>
+            <li><a href="/about.html">Về chúng tôi</a></li>
+            <li><a href="/contact.html"> Liên hệ </a></li>
+            <li><a href="/login.html">Đăng nhập</a></li>
+            <li><a href="/register.html">Đăng ký</a></li>
+            <form class="form-inline">
+              <input
+                class="form-control mr-sm-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+            </form>
+          </ul>
+        </div>
+      </header>
+
+      <!-- Arrow -->
+      <div class="arrow left">&lt;</div>
+      <div class="arrow right">&gt;</div>
+
+      <!-- Carousel container -->
+      <div class="carousel-container">
+        <!-- Carousel -->
+        <div class="carousel">
+          <div
+            class="carousel-image"
+            style="background-image: url('/img/home-1.jpg');"
+          ></div>
+          <div
+            class="carousel-image"
+            style="background-image: url('./img/home-2.png');"
+          ></div>
+          <div
+            class="carousel-image"
+            style="background-image: url('./img/home-1.jpg');"
+          ></div>
+        </div>
+
+        <!-- Indicator -->
+        <div class="indicator">
+          <div class="indicator-dot active"></div>
+          <div class="indicator-dot"></div>
+          <div class="indicator-dot"></div>
+        </div>
+      </div>
+    </div>
+    <script src="/js/index.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </body>
+</html>

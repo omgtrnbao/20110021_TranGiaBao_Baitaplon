@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Image container */
+  .image-container {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+
+ header{
+  position: relative;
+  z-index: 1;
+ }
+
+  /* Arrow */
+  .arrow {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 32px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .arrow:hover {
+    color: yellow;
+  }
+
+  /* Carousel */
+  .carousel-container {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 0;
+  }
+
+  .carousel {
+    display: flex;
+    height: 100%;
+    width: 300%;
+    transition: all 0.5s ease;
+  }
+
+  .carousel-image {
+    height: 100%;
+    width: 33.3333%;
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* Indicator */
+  .indicator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+
+  .indicator-dot {
+    height: 10px;
+    width: 10px;
+    background-color: #ddd;
+    border-radius: 50%;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .indicator-dot.active {
+    background-color: #fff;
+    transform: scale(1.5);
+  }
+
+  .card:hover img {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
